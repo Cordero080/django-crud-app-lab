@@ -12,7 +12,9 @@
   </head>
   <body>
     <nav>
-      <a href="{% url 'home' %}" class="logo">IronBody</a>
+      <a href="{% url 'home' %}" class="logo">
+        <img src="{% static 'images/iron-body.svg' %}" alt="IronBody" class="logo-img">
+      </a>
       <div class="nav-links">
         {% if user.is_authenticated %}
         <a href="{% url 'workout-index' %}">Workouts</a>
