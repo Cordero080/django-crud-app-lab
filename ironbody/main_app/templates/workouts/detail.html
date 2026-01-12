@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}{{ workout.name }}{% endblock %}
+{% block content %}
+<h1>{{ workout.name }}</h1>
+
+<p><strong>Type:</strong> {{ workout.workout_type }}</p>
+<p><strong>Duration:</strong> {{ workout.duration }} minutes</p>
+<p><strong>Date:</strong> {{ workout.date }}</p>
+<p><strong>Notes:</strong> {{ workout.notes }}</p>
+
+<a href="{% url 'workout-update' workout.id %}">Edit</a> |
+<a href="{% url 'workout-delete' workout.id %}">Delete</a> |
+<a href="{% url 'workout-index' %}">Back to List</a>
+
+<hr>
+
+<h2>Equipment Used</h2>
+{% for equip in workout.equipment.all %}
+<p>
+  {{ equip.name }}
+  <a href="{% url 'unassociate-equipment' workout.id equip.id %}">Remove</a>
+</p>
+{% empty %}
+<p>No equipment</p>
+{% endfor %}
+
+<h3>Add Equipment</h3>
+<form method="POST" action="">
+  {% csrf_token %}
+  <select name="equipment">
+    {% for equip in all_equipment %}
+    <option value="{{ equip.id }}">{{ equip.name }}</option>
+    {% endfor %}
+  </select>
+  <button>Add</button>
+</form>
+
+<hr>
+
+<h2>Exercises</h2>
+<a href="{% url 'exercise-create' workout.id %}">Add Exercise</a>
+
+{% for exercise in workout.exercise_set.all %}
+<div>
+  <h3>{{ exercise.name }}</h3>
+  <p>Sets: {{ exercise.sets }} | Reps: {{ exercise.reps }}</p>
+  <a href="{% url 'exercise-update' exercise.id %}">Edit</a> |
+  <a href="{% url 'exercise-delete' exercise.id %}">Delete</a>
+</div>
+{% empty %}
+<p>No exercises yet.</p>
+{% endfor %}
+{% endblock %}

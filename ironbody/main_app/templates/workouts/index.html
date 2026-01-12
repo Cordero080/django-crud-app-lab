@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}All Workouts{% endblock %}
+{% block content %}
+<h1>All Workouts</h1>
+
+<a href="{% url 'workout-create' %}">Add New Workout</a>
+
+{% for workout in workouts %}
+<div>
+  <a href="{% url 'workout-detail' workout.id %}">
+    <h3>{{ workout.name }}</h3>
+  </a>
+  <p>Type: {{ workout.workout_type }} | Duration: {{ workout.duration }} mins | Date: {{ workout.date }}</p>
+</div>
+<hr>
+{% empty %}
+<p>No workouts yet. Add one!</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}IronBody - Home{% endblock %}
+{% block content %}
+<section class="home-layout">
+  <div class="home-content">
+    <h1><span class="welcome-text">Welcome to</span> <span class="brand">IronBody</span></h1>
+    {% if user.is_authenticated %}
+    <p>Hello, {{ user.username }}!</p>
+    <div class="home-actions">
+      <a href="{% url 'workout-index' %}" class="btn">View Workouts</a>
+      <a href="{% url 'workout-create' %}" class="btn btn-accent">Add Workout</a>
+    </div>
+    {% else %}
+    <p>Please log in or sign up to get started.</p>
+    <div class="home-actions">
+      <a href="{% url 'login' %}" class="btn">Login</a>
+      <a href="{% url 'signup' %}" class="btn btn-accent">Sign Up</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

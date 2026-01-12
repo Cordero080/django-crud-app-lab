@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Equipment{% endblock %}
+{% block content %}
+<h1>All Equipment</h1>
+
+<a href="{% url 'equipment-create' %}">Add New Equipment</a>
+
+{% for equip in equipment_list %}
+<div>
+  <h3>{{ equip.name }}</h3>
+  <a href="{% url 'equipment-update' equip.id %}">Edit</a> |
+  <a href="{% url 'equipment-delete' equip.id %}">Delete</a>
+</div>
+<hr>
+{% empty %}
+<p>No equipment yet. Add some!</p>
+{% endfor %}
+{% endblock %}
