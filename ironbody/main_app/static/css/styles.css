@@ -18,7 +18,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   line-height: 1.6;
   min-height: 100vh;
   color: rgba(255, 255, 255, 0.7);
@@ -65,30 +67,41 @@ nav a.logo {
 }
 
 .logo-img {
-  height: 25px;
+  height: 50px ;
   margin-left: 20px;
-  margin-top: 10px;
-  width: auto;
-  filter: brightness(0) invert(1) opacity(0.8);
   
+  width: auto;
+  filter: 
+    brightness(0) invert(1) opacity(0.6)
+    drop-shadow(0 0 3px rgba(255, 255, 255, 0.3))
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
 }
 
 .title-logo {
-  height: 60px;
+  height: 150px !important;
   width: auto;
-  filter: brightness(0) invert(1) opacity(0.9) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.611));
-  vertical-align: middle;
+  vertical-align: top;
+  margin-top: -70px;
+  filter: 
+    brightness(1.2)
+    contrast(1)
+    drop-shadow(0 0 6px rgba(234, 230, 230, 0.5))
+    drop-shadow(0 0 20px rgba(82, 81, 81, 0.381))
+    drop-shadow(0 4px 6px rgba(6, 6, 22, 0.953));
 }
 
 .brand {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 500;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   letter-spacing: 3px;
   color: var(--white);
 }
 
 .nav-links {
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   display: flex;
   align-items: center;
   gap: 2.5rem;
@@ -170,20 +183,24 @@ h1 {
 
 h2 {
   color: var(--white);
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   margin: 1.5rem 0 1rem;
   font-size: 1.8rem;
   text-shadow: 0 2px 8px var(--white-10);
 }
 
 h3 { color: var(--gray); margin: 0.5rem 0;
-font-family: 'Roboto', sans-serif; }
+font-family: "itc-avant-garde-gothic-pro", sans-serif; font-weight: 300; font-style: normal; }
 p { margin: 0.5rem 0;
-font-family: 'Roboto', sans-serif; }
+font-family: "itc-avant-garde-gothic-pro", sans-serif; font-weight: 300; font-style: normal; }
 
 a {
   color: var(--white);
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -195,7 +212,9 @@ a:hover {
 
 /* Forms */
 form {
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   background: linear-gradient(120deg, rgba(30, 30, 30, 0.8) 60%, rgba(50, 50, 50, 0.6));
   backdrop-filter: blur(12px) saturate(180%) brightness(1.1);
   -webkit-backdrop-filter: blur(12px) saturate(180%) brightness(1.1);
@@ -207,11 +226,13 @@ form {
 }
 
 form p { margin-bottom: 1rem;
-font-family: 'Roboto', sans-serif; }
+font-family: "itc-avant-garde-gothic-pro", sans-serif; font-weight: 300; font-style: normal; }
 
 label {
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   margin-bottom: 0.5rem;
   color: var(--gray);
   font-weight: 500;
@@ -238,7 +259,9 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   border-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 4px 16px var(--white-10);
 }
@@ -246,7 +269,9 @@ textarea:focus {
 /* Buttons */
 button, .btn {
   background: linear-gradient(180deg, #e2ddddc2 0%, #636262 60%, #44444a 100%);
-  font-family: 'Roboto', sans-serif;
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   color: #111;
   border: 1px solid rgba(56, 55, 55, 0.614);
   padding: 0.5rem 1.5rem;
